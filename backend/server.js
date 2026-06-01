@@ -21,7 +21,7 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
 
-  console.log("User connected:", socket.id);
+  // console.log("User connected:", socket.id);
 
   socket.on("join_channel", (channelId) => {
       socket.join(channelId);
@@ -70,9 +70,9 @@ io.on("connection", (socket) => {
 
     }
 });
-  socket.on("disconnect", () => {
-    console.log("User disconnected:", socket.id);
-  });
+  // socket.on("disconnect", () => {
+  //   console.log("User disconnected:", socket.id);
+  // });
 
 });
 
